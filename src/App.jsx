@@ -1,9 +1,11 @@
+import GlobalStyle from "./style/reset"
 import AboutMe from "./sections/AboutMe/AboutMe"
+import NavBar from "./sections/NavBar/NavBar"
 
 const App = () => {
   return (
-    <>
-      <h1>Iniciando</h1>
+    <><GlobalStyle />
+    <NavBar></NavBar>
       <AboutMe></AboutMe>
     </>
   )
