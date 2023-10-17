@@ -2,9 +2,9 @@ import styled from "styled-components";
 import LogoFC from '../../assets/logo-fc.png'
 
 const LogoDevContentStyle = styled.div`
-    height: 70px;
+    height: 80px;
     width: auto;
-    background-color: orange;
+    cursor: pointer;
 `;
 
 const LogoDevImg = styled.img`

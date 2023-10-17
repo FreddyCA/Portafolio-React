@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     html {
         font-size: 16px;
         background-image: url(${BGsvgs});
+        font-family: 'Roboto', sans-serif;
     }
 `;
 
