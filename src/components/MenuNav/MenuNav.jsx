@@ -41,7 +41,7 @@ const MenuNavItemStyle = styled.div`
     justify-content: center;
     border-bottom: 2px solid var(--color--textoPrincipal);
 
-    animation: ${AnimationMenuItem} 0.5s ease-in-out;
+    animation: ${AnimationMenuItem} 0.2s ease-in-out;
     animation-fill-mode: both;
     /* &:nth-child(1) {
       animation-delay: 0.01s;

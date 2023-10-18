@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Círculo exterior -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="blue" stroke-width="20" />
+
+  <!-- Línea curva que crea el efecto de borde no uniforme -->
+  <path d="M10,100 Q100,10 190,100" fill="none" stroke="blue" stroke-width="20" />
+
+  <!-- Otras propiedades, como colores, grosor de línea, etc., pueden ser ajustadas según tus preferencias -->
+</svg>

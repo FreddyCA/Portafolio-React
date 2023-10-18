@@ -1,13 +1,32 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
-const ButtonStyle = styled.button`
-  background-color: azure;
-  height: 20px;
-  width: auto;
+const ButtonStyle = styled.a`
+  /* background-color: black; */
+  /* height: 20px; */
+  color: white;
+  width: 150px;
+  border: 1px solid var(--color--resaltador);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--color--fondoHover);
+    color: var(--color--resaltador);
+    box-shadow: 5px px 15px rgba(275, 275, 275, 0.2);
+  }
 `;
 
-const Button = () => {
-  return <ButtonStyle>cLICK</ButtonStyle>;
+const Button = ({children}) => {
+  return <ButtonStyle>{children}</ButtonStyle>;
+};
+
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Button;
