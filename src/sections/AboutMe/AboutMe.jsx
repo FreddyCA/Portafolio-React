@@ -13,7 +13,6 @@ import LinkedinSVG from "../../assets/svg/linkedin.svg";
 import CurriculumSVG from "../../assets/svg/pdf.svg";
 
 const AboutMeStyle = styled.div`
-  /* background-color: blue; */
   width: 100%;
   height: 400px;
   display: flex;
@@ -21,21 +20,20 @@ const AboutMeStyle = styled.div`
 `;
 
 const PerfilContentSvg = styled.div`
-  min-width: 350px;
-  /* height: 400px; */
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
   background-image: url(${PefilPhotoBG});
   background-repeat: no-repeat;
-  background-size: 450px;
-  background-position-x: -70px;
-  background-position-y: 10px;
+  background-size: 550px;
+  background-position-x: -130px;
+  background-position-y: -40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 5px 10px rgba(275, 215, 0, 0.3);
 `;
-// quitar fondo ofi, centrear
 const PerfilSvg = styled.img`
-  /* background-color: yellow; */
-  height: 300px;
+  height: 100%;
 `;
 const IconAboutSVGStyle = styled.img`
   width: 20px;
