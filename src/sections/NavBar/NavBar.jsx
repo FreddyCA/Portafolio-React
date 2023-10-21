@@ -3,8 +3,8 @@ import LogoDev from "../../components/LogoDev/LogoDev";
 import MenuNav from "../../components/MenuNav/MenuNav";
 
 const NavBarStyle = styled.div`
-  /* background-color: yellow; */
-  border-bottom: 2px solid var( --color--textoPrincipal);
+  background-color: #121212;
+  border-bottom: 2px solid var(--color--textoPrincipal);
   height: 100px;
   padding: 0 2rem;
   display: flex;
@@ -13,10 +13,12 @@ const NavBarStyle = styled.div`
 `;
 
 const NavBar = () => {
-  return <NavBarStyle>
-    <LogoDev></LogoDev>
-    <MenuNav></MenuNav>
-  </NavBarStyle>;
+  return (
+    <NavBarStyle>
+      <LogoDev></LogoDev>
+      <MenuNav></MenuNav>
+    </NavBarStyle>
+  );
 };
 
 export default NavBar;

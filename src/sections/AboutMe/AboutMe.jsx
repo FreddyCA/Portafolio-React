@@ -1,10 +1,9 @@
 import styled from "styled-components";
-// import Button from "../../components/Buttons/Buttons";
 import ContentSections from "../../components/ContentSections/ContentSections";
 
 import PefilPhotoBG from "../../assets/svg/blob.svg";
 import PefilPhoto from "../../assets/ofi-small.png";
-import Button from "../../components/Buttons/Buttons";
+import Button from "../../components/Button/Button";
 import Name from "../../components/Name/Name";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import ArrowSVG from "../../assets/svg/arrow.svg";
@@ -54,6 +53,8 @@ const InfoContent = styled.div`
   gap: 1rem;
   justify-content: center;
 `;
+
+
 
 const AboutMe = () => {
   return (
