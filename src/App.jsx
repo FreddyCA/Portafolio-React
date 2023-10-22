@@ -6,6 +6,7 @@ import Skills from "./sections/Skills/Skills";
 import Hobbies from "./sections/Hobbies/Hobbies";
 import Academic from "./sections/Academic/Academic";
 import ExpProf from "./sections/ExpProf/ExpProf";
+import Footer from "./sections/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       <Hobbies></Hobbies>
       <Academic></Academic>
       <ExpProf></ExpProf>
+
+
+      <Footer></Footer>
     </>
   );
 };

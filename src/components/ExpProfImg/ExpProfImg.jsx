@@ -2,10 +2,10 @@ import styled from "styled-components";
 import AluraFlixImg from "../../assets/exp/aluraflix.png";
 
 const ExpProfSpanStyle = styled.span`
-  background-color: white;
+  /* background-color: white; */
   height: 300px;
   width: 60%;
-  border: 5px solid var(--color--textoPrincipal);
+  border: 5px solid rgb(228, 228, 228, 0.8);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   transition: all 400ms ease;
   box-sizing: border-box;
@@ -17,7 +17,6 @@ const ExpProfSpanStyle = styled.span`
   }
 `;
 
-// continuar, cambiar borde mas opaco
 const ExpProfImgStyle = styled.img`
   width: 100%;
   transform: 0;
