@@ -16,12 +16,21 @@ const AcademicButtonContentStyle = styled.div`
 const AcademicButtonItemStyle = styled.div`
   min-width: 200px;
   height: 300px;
-  border: 2px solid rgba(100, 275, 0, 0.5);
-  background-color: rgba(250, 200, 275, 0.7);
-  border-end-end-radius: 10px ;
-  border-end-start-radius: 10px ;
+  border: 2px solid rgb(228, 228, 228, 0.8);
+  background-color: rgb(228, 228, 228, 0.9);
+  /* border-end-end-radius: 10px ; */
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  /* border-end-start-radius: 10px ; */
 
   cursor: pointer;
+
+  &:hover {
+    background-color: rgb(228, 228, 228);
+    translate: 0 -0.2rem;
+    transition: 250ms;
+    box-shadow: 0 5px 20px rgba(228, 228, 228, 0.8);
+  }
 `;
 
 const AcademicImgContentStyle = styled.div`
@@ -51,8 +60,8 @@ const AcademicTextContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-end-end-radius: 10px ;
-  border-end-start-radius: 10px ;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
 `;
 
 const AcademicText = styled.p`

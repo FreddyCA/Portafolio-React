@@ -17,7 +17,7 @@ const App = () => {
       <Person></Person>
       <Skills></Skills>
       <Hobbies></Hobbies>
-      <Academic></Academic>
+      <Academic />
       <ExpProf></ExpProf>
 
 
