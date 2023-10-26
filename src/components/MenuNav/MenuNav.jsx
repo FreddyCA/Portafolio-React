@@ -139,7 +139,6 @@ const MenuNavLinkStyle = styled.a`
 
 const MenuNav = () => {
   const [menuEstado, setMenuEstado] = useState(true);
-  console.log(menuEstado);
 
   const toggleMenu = () => {
     setMenuEstado(!menuEstado);

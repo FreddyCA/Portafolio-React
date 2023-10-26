@@ -2,8 +2,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const ButtonStyle = styled.a`
-  /* background-color: black; */
-  /* height: 20px; */
   color: white;
   width: 150px;
   border: 1px solid var(--color--resaltador);

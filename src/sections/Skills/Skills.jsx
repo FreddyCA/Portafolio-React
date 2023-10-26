@@ -9,7 +9,6 @@ const SkillsStyle = styled.div`
   width: 100%;
   padding: 2rem 2rem 0;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   gap: 2rem;

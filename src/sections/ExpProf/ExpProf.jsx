@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ContentSections from "../../components/ContentSections/ContentSections";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import ExpProfImg from "../../components/ExpProfImg/ExpProfImg";
-import Button from "../../components/Button/Button";
 import ExpText from "../../components/ExpText/ExpText";
+import ButtonExpLink from "../../components/ButtonExpLink/ButtonExpLink";
+
+import data from "../../data";
 
 const ExpProfStyled = styled.div`
   width: 100%;
@@ -17,6 +19,12 @@ const ExpProfContentItemStyle = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  ${(props) => {
+    props.$isEven &&
+      css`
+      background-color: red;
+      `;
+  }}
 `;
 
 const ExpProfInfoStyle = styled.div`
@@ -26,46 +34,26 @@ const ExpProfInfoStyle = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-const ExpProfBtnsStyle = styled.div`
-  display: flex;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: start;
-  gap: 1rem;
-`;
 
 const ExpProf = () => {
+  console.log(data.experience);
   return (
     <ContentSections>
       <ExpProfStyled>
         <Subtitle bold>Experiencia Profesional</Subtitle>
-
-        <ExpProfContentItemStyle>
-          <ExpProfImg></ExpProfImg>
-          <ExpProfInfoStyle>
-            <Subtitle>AluraFlix</Subtitle>
-            <ExpText>
-              Proyecto del programa ONE, página web desarrollada con React con
-              un apariencia similar a una plataforma de video
-            </ExpText>
-            <ExpProfBtnsStyle>
-              <Button>Repositorio</Button>
-              <Button>Demo</Button>
-            </ExpProfBtnsStyle>
-          </ExpProfInfoStyle>
-        </ExpProfContentItemStyle>
-
-        <ExpProfContentItemStyle>
-          <ExpProfImg></ExpProfImg>
-          <ExpProfInfoStyle>
-            <Subtitle>Mini</Subtitle>
-            <ExpText>Proyecto</ExpText>
-            <ExpProfBtnsStyle>
-              <Button>repo</Button>
-              <Button>demo</Button>
-            </ExpProfBtnsStyle>
-          </ExpProfInfoStyle>
-        </ExpProfContentItemStyle>
+        {data.experience.map((item, index) => (
+          <ExpProfContentItemStyle key={index} $isEven={index % 2 === 0}>
+            <ExpProfImg imgItem={item.img} altItem={item.title}></ExpProfImg>
+            <ExpProfInfoStyle>
+              <Subtitle>{item.title}</Subtitle>
+              <ExpText>{item.description}</ExpText>
+              <ButtonExpLink
+                repoLink={item.repository}
+                demoLink={item.demo}
+              ></ButtonExpLink>
+            </ExpProfInfoStyle>
+          </ExpProfContentItemStyle>
+        ))}
       </ExpProfStyled>
     </ContentSections>
   );

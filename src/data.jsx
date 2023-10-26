@@ -95,14 +95,112 @@ const data = {
   ],
   "hobbies": [
     {
-      "titulo": "HTML",
-      "img": "/src/assets/logos/html5.png",
+      "titulo": "Tocar trompeta",
+      "img": "/src/assets/logos/trompeta.png",
     },
     {
-      "titulo": "HTML",
-      "img": "/src/assets/logos/html5.png",
+      "titulo": "Lectura",
+      "img": "/src/assets/logos/lectura.png",
     },
+    {
+      "titulo": "Escuchar música",
+      "img": "/src/assets/logos/musica.png",
+    },
+    {
+      "titulo": "Fútbol",
+      "img": "/src/assets/logos/futbol.png",
+    },
+    {
+      "titulo": "Electrónica",
+      "img": "/src/assets/logos/micro.png",
+    }
   ],
+  "experience": [
+    {
+      "title": "Alura Geek Store",
+      "description": "Proyecto E-commerce en Alura",
+      "repository": "https://github.com/FreddyCA/AluraGeek-Store",
+      "demo": "https://freddyca.github.io/AluraGeek-Store/",
+      "img": "/src/assets/exp/alurageek.png"
+    },
+    {
+      "title": "AluraFlix",
+      "description": "Proyecto en Alura con características similares a una plataforma de video.",
+      "repository": "https://github.com/FreddyCA/AluraFlix",
+      "demo": "https://github.com/FreddyCA/AluraFlix",
+      "img": "/src/assets/exp/aluraflix.png"
+    },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "",
+    //   "description": "",
+    //   "repository": "",
+    //   "demo": "",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "AluraFlix",
+    //   "description": "Proyecto del programa ONE, página web desarrollada con React con un apariencia similar a una plataforma de video",
+    //   "repository": "repo elefante",
+    //   "demo": "demo elefante",
+    //   "img": ""
+    // },
+    // {
+    //   "title": "AluraFlix",
+    //   "description": "Proyecto del programa ONE, página web desarrollada con React con un apariencia similar a una plataforma de video",
+    //   "repository": "repo crack",
+    //   "demo": "demo crack",
+    //   "img": ""
+    // }
+  ]
 };
 
 export default data;

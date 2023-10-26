@@ -15,8 +15,8 @@ const App = () => {
       <NavBar></NavBar>
       <AboutMe></AboutMe>
       <Person></Person>
-      <Skills></Skills>
-      <Hobbies></Hobbies>
+      <Skills />
+      <Hobbies />
       <Academic />
       <ExpProf></ExpProf>
 

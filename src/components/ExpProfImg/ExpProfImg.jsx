@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import AluraFlixImg from "../../assets/exp/aluraflix.png";
+import PropTypes from "prop-types";
 
 const ExpProfSpanStyle = styled.span`
-  /* background-color: white; */
   height: 300px;
   width: 60%;
   border: 5px solid rgb(228, 228, 228, 0.8);
@@ -10,10 +9,11 @@ const ExpProfSpanStyle = styled.span`
   transition: all 400ms ease;
   box-sizing: border-box;
   overflow: hidden;
-
   &:hover {
     box-shadow: none;
     cursor: pointer;
+    border: 5px solid rgb(255, 215, 0, 0.5);
+
   }
 `;
 
@@ -26,12 +26,18 @@ const ExpProfImgStyle = styled.img`
   }
 `;
 
-const ExpProfImg = () => {
+const ExpProfImg = ({imgItem, altItem}) => {
   return (
     <ExpProfSpanStyle>
-      <ExpProfImgStyle src={AluraFlixImg} alt="aluraflix"></ExpProfImgStyle>
+      <ExpProfImgStyle src={imgItem} alt={`captura de ${altItem}`}></ExpProfImgStyle>
     </ExpProfSpanStyle>
   );
 };
+
+ExpProfImg.propTypes = {
+  imgItem: PropTypes.string.isRequired,
+  altItem: PropTypes.string.isRequired,
+};
+
 
 export default ExpProfImg;

@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 import OpenMenu from "../../assets/icons/menu.svg";
 import CloseMenu from "../../assets/icons/menuX.svg";
 
 const IconMenuNavStyle = styled.div`
-  /* background-color: aquamarine; */
-
   display: none;
+
   @media screen and (max-width: 992px) {
     display: block;
     height: 100px;
@@ -14,18 +14,24 @@ const IconMenuNavStyle = styled.div`
     align-items: center;
     justify-content: end;
     padding-right: 2rem;
+    ${(props) =>
+      !props.$menuEstado &&
+      css`
+        background-color: var(--color--fondoHover);
+        border-bottom: 2px solid var(--color--textoPrincipal);
+      `}
   }
 `;
 
 const IconMenuImgStyle = styled.img`
-  /* background-color: bisque; */
   width: 30px;
   height: 30px;
+  cursor: pointer;
 `;
 
 const IconMenuNav = ({ toggleMenu, menuEstado }) => {
   return (
-    <IconMenuNavStyle>
+    <IconMenuNavStyle $menuEstado={menuEstado}>
       {menuEstado ? (
         <IconMenuImgStyle
           onClick={toggleMenu}
@@ -41,6 +47,11 @@ const IconMenuNav = ({ toggleMenu, menuEstado }) => {
       )}
     </IconMenuNavStyle>
   );
+};
+
+IconMenuNav.propTypes = {
+  toggleMenu: PropTypes.func.isRequired,
+  menuEstado: PropTypes.bool.isRequired,
 };
 
 export default IconMenuNav;
