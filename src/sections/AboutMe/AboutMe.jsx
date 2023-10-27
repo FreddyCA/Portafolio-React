@@ -7,9 +7,8 @@ import Button from "../../components/Button/Button";
 import Name from "../../components/Name/Name";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import ArrowSVG from "../../assets/svg/arrow.svg";
-import GithubSVG from "../../assets/svg/github.svg";
-import LinkedinSVG from "../../assets/svg/linkedin.svg";
-import CurriculumSVG from "../../assets/svg/pdf.svg";
+
+import data from "../../data";
 
 const AboutMeStyle = styled.div`
   width: 100%;
@@ -54,8 +53,6 @@ const InfoContent = styled.div`
   justify-content: center;
 `;
 
-
-
 const AboutMe = () => {
   return (
     <ContentSections>
@@ -64,21 +61,19 @@ const AboutMe = () => {
           <Name></Name>
           <Subtitle>Frontend Developer</Subtitle>
           <BotonsContent>
-            <Button>
-              <IconAboutSVGStyle src={GithubSVG} alt="github" />
-              Github
-              <IconAboutSVGStyle src={ArrowSVG} alt="arrow" />
-            </Button>
-            <Button>
-              <IconAboutSVGStyle src={LinkedinSVG} alt="linkedin" />
-              Linkedin
-              <IconAboutSVGStyle src={ArrowSVG} alt="arrow" />{" "}
-            </Button>
-            <Button>
-              <IconAboutSVGStyle src={CurriculumSVG} alt="curriculum" />
-              Currículum
-              <IconAboutSVGStyle src={ArrowSVG} alt="arrow" />
-            </Button>
+            {data.aboutMe.map((item, index) => (
+              <Button key={index} href={item.href}>
+                <IconAboutSVGStyle
+                  src={item.icon}
+                  alt={`icono ${item.redName}`}
+                ></IconAboutSVGStyle>
+                {item.redName}
+                <IconAboutSVGStyle
+                  src={ArrowSVG}
+                  alt="abrir en otra ventana"
+                ></IconAboutSVGStyle>
+              </Button>
+            ))}
           </BotonsContent>
         </InfoContent>
         <PerfilContentSvg>

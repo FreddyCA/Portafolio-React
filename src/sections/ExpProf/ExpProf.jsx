@@ -19,12 +19,11 @@ const ExpProfContentItemStyle = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  ${(props) => {
+  ${(props) =>
     props.$isEven &&
-      css`
-      background-color: red;
-      `;
-  }}
+    css`
+      flex-direction: row-reverse;
+    `}
 `;
 
 const ExpProfInfoStyle = styled.div`
@@ -36,13 +35,12 @@ const ExpProfInfoStyle = styled.div`
 `;
 
 const ExpProf = () => {
-  console.log(data.experience);
   return (
     <ContentSections>
       <ExpProfStyled>
         <Subtitle bold>Experiencia Profesional</Subtitle>
         {data.experience.map((item, index) => (
-          <ExpProfContentItemStyle key={index} $isEven={index % 2 === 0}>
+          <ExpProfContentItemStyle key={index} $isEven={index % 2 !== 0}>
             <ExpProfImg imgItem={item.img} altItem={item.title}></ExpProfImg>
             <ExpProfInfoStyle>
               <Subtitle>{item.title}</Subtitle>

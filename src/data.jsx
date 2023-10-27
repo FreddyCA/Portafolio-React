@@ -1,4 +1,21 @@
 const data = {
+  "aboutMe": [
+    {
+      "redName": "GitHub",
+      "icon": "/src/assets/svg/github.svg",
+      "href": "https://github.com/FreddyCA",
+    },
+    {
+      "redName": "Linkedin",
+      "icon": "/src/assets/svg/linkedin.svg",
+      "href":"https://www.linkedin.com/in/carlosari/",
+    },
+    {
+      "redName": "Currículum",
+      "icon": "/src/assets/svg/pdf.svg",
+      "href": "#",
+    }
+  ],
   "hardSkills": [
     {
       "titulo": "HTML",
@@ -130,76 +147,56 @@ const data = {
       "demo": "https://github.com/FreddyCA/AluraFlix",
       "img": "/src/assets/exp/aluraflix.png"
     },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "",
-    //   "description": "",
-    //   "repository": "",
-    //   "demo": "",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "AluraFlix",
-    //   "description": "Proyecto del programa ONE, página web desarrollada con React con un apariencia similar a una plataforma de video",
-    //   "repository": "repo elefante",
-    //   "demo": "demo elefante",
-    //   "img": ""
-    // },
-    // {
-    //   "title": "AluraFlix",
-    //   "description": "Proyecto del programa ONE, página web desarrollada con React con un apariencia similar a una plataforma de video",
-    //   "repository": "repo crack",
-    //   "demo": "demo crack",
-    //   "img": ""
-    // }
+    {
+      "title": "Encriptador",
+      "description": "Challenge Oracle",
+      "repository": "https://github.com/FreddyCA/Encriptador-ONE-alura-LATAM",
+      "demo": "https://freddyca.github.io/Encriptador-ONE-alura-LATAM/",
+      "img": "/src/assets/exp/encriptador.png"
+    },
+    {
+      "title": "Apeperia",
+      "description": "Proyecto en Alura",
+      "repository": "https://github.com/FreddyCA/Home-Apeperia",
+      "demo": "https://freddyca.github.io/Home-Apeperia/",
+      "img": "/src/assets/exp/homeApeperia.png"
+    },
+    {
+      "title": "Coinbase",
+      "description": "Proyecto en Open Bootcamp",
+      "repository": "https://github.com/FreddyCA/Coinbase",
+      "demo": "https://freddyca.github.io/Coinbase/",
+      "img": "/src/assets/exp/coinbase.png"
+    },
+    {
+      "title": "Fruta & Fruto",
+      "description": "Proyecto en Alura",
+      "repository": "https://github.com/FreddyCA/Fruta-Y-Fruto",
+      "demo": "https://freddyca.github.io/Fruta-Y-Fruto/",
+      "img": "/src/assets/exp/frutayfruto.png"
+    },
+    {
+      "title": "Mini Alura",
+      "description": "Proyecto en Alura",
+      "repository": "https://github.com/FreddyCA/Mini-Alura",
+      "demo": "https://freddyca.github.io/Mini-Alura/",
+      "img": "/src/assets/exp/miniAlura.png"
+
+    },
+    {
+      "title": "Carrito de Compras",
+      "description": "",
+      "repository": "https://github.com/FreddyCA/Carrito-de-Compras",
+      "demo": "https://freddyca.github.io/Carrito-de-Compras/",
+      "img": "/src/assets/exp/carritodeCompras.png"
+    },
+    {
+      "title": "ORG",
+      "description": "Proyecto en Alura",
+      "repository": "https://github.com/FreddyCA/ORG-React",
+      "demo": "https://org-freddyca.vercel.app/",
+      "img": "/src/assets/exp/org.png"
+    }
   ]
 };
 

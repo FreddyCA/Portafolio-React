@@ -15,7 +15,6 @@ const SkillsStyle = styled.div`
 `;
 
 const Skills = () => {
-  // console.log(data)
   return (
     <>
       <ContentSections>

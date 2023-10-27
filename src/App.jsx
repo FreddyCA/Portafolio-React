@@ -18,7 +18,7 @@ const App = () => {
       <Skills />
       <Hobbies />
       <Academic />
-      <ExpProf></ExpProf>
+      <ExpProf />
 
 
       <Footer></Footer>

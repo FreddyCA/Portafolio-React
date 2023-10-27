@@ -22,15 +22,13 @@ const SkillItemStyle = styled.div`
   justify-content: space-between;
   transition: all 250ms ease;
   border-radius: 1.5rem;
-  box-shadow: 0 5px 18px rgba(275, 175, 0, 0.7);
+  box-shadow: 0 6px 8px rgba(275, 175, 0, 0.7);
   border: 1px solid rgba(275, 175, 0, 0.4);
   cursor: pointer;
   box-sizing: border-box;
-
   &:hover {
     translate: 0 -0.5rem;
     background-color: var(--color--fondoHover);
-    box-shadow: 0 15px 20px rgba(75, 0, 130, 0.2);
     box-shadow: 0 10px 12px rgba(275, 275, 275, 0.3);
     border: 2px solid rgba(275, 175, 0, 0.4);
   }
