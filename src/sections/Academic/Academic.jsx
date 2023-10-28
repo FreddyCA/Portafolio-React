@@ -13,7 +13,7 @@ const AcademicStyle = styled.div`
 
 const Academic = () => {
   return (
-    <AcademicStyle>
+    <AcademicStyle id="formacion">
       <Subtitle bold>Formación Académica</Subtitle>
       <AcademicButton></AcademicButton>
     </AcademicStyle>

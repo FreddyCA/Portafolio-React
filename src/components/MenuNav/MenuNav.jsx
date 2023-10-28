@@ -54,7 +54,7 @@ const MenuNavItemStyle = styled.div`
       box-shadow: 5px 10px 15px rgba(275, 275, 275, 0.3);
     }
     &:nth-child(5) {
-      animation-delay: 0.20s;
+      animation-delay: 0.2s;
       z-index: 17;
     }
     &:nth-child(6) {
@@ -62,7 +62,7 @@ const MenuNavItemStyle = styled.div`
       z-index: 16;
     }
     &:nth-child(7) {
-      animation-delay: 0.30s;
+      animation-delay: 0.3s;
       z-index: 15;
       box-shadow: 5px 10px 15px rgba(275, 275, 275, 0.3);
     }
@@ -138,6 +138,26 @@ const MenuNavLinkStyle = styled.a`
 `;
 
 const MenuNav = () => {
+  const data = [
+    {"id":"#sobre_mi",
+    "text": "Sobre mi"
+    },
+    {"id":"#skills",
+    "text": "Skills"
+    },
+    {"id":"#hobbies",
+    "text": "Hobbies"
+    },
+    {"id":"#formacion",
+    "text": "Formación"
+    },
+    {"id":"#proyectos",
+    "text": "Proyectos"
+    },
+    {"id":"#contacto",
+    "text": "Contacto"
+    }
+  ];
   const [menuEstado, setMenuEstado] = useState(true);
 
   const toggleMenu = () => {
@@ -149,24 +169,11 @@ const MenuNav = () => {
         toggleMenu={toggleMenu}
         menuEstado={menuEstado}
       ></IconMenuNav>
-      <MenuNavItemStyle $menuEstado={menuEstado}>
-        <MenuNavLinkStyle>Aaa</MenuNavLinkStyle>
-      </MenuNavItemStyle>
-      <MenuNavItemStyle $menuEstado={menuEstado}>
-        <MenuNavLinkStyle>Bbb</MenuNavLinkStyle>
-      </MenuNavItemStyle>
-      <MenuNavItemStyle $menuEstado={menuEstado}>
-        <MenuNavLinkStyle>Ccc</MenuNavLinkStyle>
-      </MenuNavItemStyle>
-      <MenuNavItemStyle $menuEstado={menuEstado}>
-        <MenuNavLinkStyle>Aaa</MenuNavLinkStyle>
-      </MenuNavItemStyle>
-      <MenuNavItemStyle $menuEstado={menuEstado}>
-        <MenuNavLinkStyle>Bbb</MenuNavLinkStyle>
-      </MenuNavItemStyle>
-      <MenuNavItemStyle $menuEstado={menuEstado}>
-        <MenuNavLinkStyle>Ccc</MenuNavLinkStyle>
-      </MenuNavItemStyle>
+      {data.map((item, index) => (
+        <MenuNavItemStyle key={index} $menuEstado={menuEstado}>
+          <MenuNavLinkStyle href={item.id}>{item.text}</MenuNavLinkStyle>
+        </MenuNavItemStyle>
+      ))}
     </MenuNavStyle>
   );
 };

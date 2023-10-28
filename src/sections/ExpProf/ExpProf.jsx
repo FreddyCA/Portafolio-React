@@ -37,7 +37,7 @@ const ExpProfInfoStyle = styled.div`
 const ExpProf = () => {
   return (
     <ContentSections>
-      <ExpProfStyled>
+      <ExpProfStyled id="proyectos">
         <Subtitle bold>Experiencia Profesional</Subtitle>
         {data.experience.map((item, index) => (
           <ExpProfContentItemStyle key={index} $isEven={index % 2 !== 0}>

@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import ContentSections from "../../components/ContentSections/ContentSections";
 
-import PefilPhotoBG from "../../assets/svg/blob.svg";
 import PefilPhoto from "../../assets/ofi-small.png";
 import Button from "../../components/Button/Button";
 import Name from "../../components/Name/Name";
@@ -17,18 +16,26 @@ const AboutMeStyle = styled.div`
   justify-content: space-between;
 `;
 
+const borderAnimation = keyframes`
+  0%, 100% {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+  }
+  25%, 75% {
+    border-top: 3px solid rgba(275, 215, 0, 0.6);
+    border-bottom: 3px solid rgba(275, 215, 0, 0.6);
+    border-left: 3px solid rgba(275, 215, 0, 0.6);
+    border-right: 3px solid rgba(275, 215, 0, 0.6);
+  }
+`;
+
 const PerfilContentSvg = styled.div`
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  background-image: url(${PefilPhotoBG});
-  background-repeat: no-repeat;
-  background-size: 550px;
-  background-position-x: -130px;
-  background-position-y: -40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 380px;
+  background-color: var(--color--fondoPrincipal);
   box-shadow: 0px 5px 10px rgba(275, 215, 0, 0.3);
+  animation: ${borderAnimation} 5s linear infinite;
 `;
 const PerfilSvg = styled.img`
   height: 100%;
@@ -38,7 +45,6 @@ const IconAboutSVGStyle = styled.img`
   display: flex;
   margin: 0 0.3rem;
 `;
-
 const BotonsContent = styled.div`
   display: flex;
   gap: 1rem;

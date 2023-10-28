@@ -22,7 +22,7 @@ const PersonTextStyle = styled.p`
 const Person = () => {
   return (
     <ContentSections>
-      <PersonStyle>
+      <PersonStyle id="sobre_mi">
         <Subtitle bold={true}>Sobre mi</Subtitle>
         <PersonTextStyle>
           Soy de La Paz, Bolivia, en los últimos 2 años llevo aprendiendo de

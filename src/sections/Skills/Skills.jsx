@@ -18,7 +18,7 @@ const Skills = () => {
   return (
     <>
       <ContentSections>
-        <SkillsStyle>
+        <SkillsStyle id="skills">
           <Subtitle bold={true}>Hard Skills</Subtitle>
           <SkillButton data={data.hardSkills}></SkillButton>
         </SkillsStyle>

@@ -7,6 +7,7 @@ import Hobbies from "./sections/Hobbies/Hobbies";
 import Academic from "./sections/Academic/Academic";
 import ExpProf from "./sections/ExpProf/ExpProf";
 import Footer from "./sections/Footer/Footer";
+import Contact from "./sections/Contact/Contact";
 
 const App = () => {
   return (
@@ -14,13 +15,12 @@ const App = () => {
       <GlobalStyle />
       <NavBar></NavBar>
       <AboutMe></AboutMe>
-      <Person></Person>
+      <Person />
       <Skills />
       <Hobbies />
       <Academic />
       <ExpProf />
-
-
+      <Contact></Contact>
       <Footer></Footer>
     </>
   );

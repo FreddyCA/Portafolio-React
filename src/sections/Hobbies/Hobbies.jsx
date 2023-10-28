@@ -17,7 +17,7 @@ const HobbiesStyle = styled.div`
 const Hobbies = () => {
   return (
     <ContentSections>
-      <HobbiesStyle>
+      <HobbiesStyle id="hobbies">
         <Subtitle bold={true}>Hobbies</Subtitle>
         <HobbieButton data={data.hobbies}></HobbieButton>
       </HobbiesStyle>
