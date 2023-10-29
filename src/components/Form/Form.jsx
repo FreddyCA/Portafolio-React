@@ -1,5 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 import styled, { css } from "styled-components";
+import { useForm } from "../../hooks/useForm";
 
 const FormContentStyle = styled.div`
   width: 400px;
@@ -77,33 +78,43 @@ const FormButtonStyle = styled.button`
   cursor: pointer;
 `;
 
+const initialForm = {};
+const validationsForm = (form) => {
+  console.log(form)
+};
+
 const Form = () => {
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-    // agregar error para mensaje de error, usar useref o algo similar
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
 
-  // const [error, setError] = useState(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(formData);
+  // };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    
-  };
+  const {
+    form,
+    errors,
+    loading,
+    response,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  } = useForm(initialForm, validationsForm);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(formData);
-  };
-
+  console.log(errors, loading, response)
   return (
     <FormContentStyle>
       <FormNameStyle>Contacto</FormNameStyle>
@@ -112,46 +123,59 @@ const Form = () => {
         Complete el siguiente formulario y me pondré en contacto con usted lo
         antes posible.
       </FormNameStyle>
+
       <FormStyle onSubmit={handleSubmit} autoComplete="on">
         <FormLabelStyle htmlFor="name">Nombre</FormLabelStyle>
         <FormInputStyle
           type="text"
-          id="name"
           name="name"
-          value={formData.nombre}
+          placeholder="Escribe tu nombre"
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={form.name}
+          id="name"
           autoComplete="on"
+          required
         ></FormInputStyle>
-        <FormTextErrorStyle>Error</FormTextErrorStyle>
 
-        <FormLabelStyle htmlFor="email">Correo</FormLabelStyle>
+        <FormLabelStyle htmlFor="email">Email</FormLabelStyle>
+
         <FormInputStyle
           type="email"
-          id="email"
           name="email"
-          value={formData.correo}
+          placeholder="Escribe tu email"
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={form.email}
+          id="email"
           autoComplete="on"
+          required
         ></FormInputStyle>
-        <FormTextErrorStyle>Error</FormTextErrorStyle>
 
         <FormLabelStyle htmlFor="subject">Asunto</FormLabelStyle>
         <FormInputStyle
           type="text"
-          id="subject"
           name="subject"
-          value={formData.asunto}
+          placeholder="Asunto a tratar"
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={form.subject}
+          id="subject"
+          autoComplete="on"
+          required
         ></FormInputStyle>
-        <FormTextErrorStyle>Error</FormTextErrorStyle>
 
         <FormLabelStyle htmlFor="message">Mensaje</FormLabelStyle>
         <FormTextStyle
           id="message"
           name="message"
-          value={formData.mensaje}
+          placeholder="Escribe tu mensaje"
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={form.message}
+          required
         ></FormTextStyle>
+
         <FormTextErrorStyle>Error</FormTextErrorStyle>
 
         <FormButtonStyle type="submit">Enviar</FormButtonStyle>
