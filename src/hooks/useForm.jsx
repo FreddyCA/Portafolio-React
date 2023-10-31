@@ -7,12 +7,25 @@ export const useForm = (initialForm, validateForm) => {
   const [loading, setLoading] = useState(false);
 
   const [response, setResponse] = useState(null);
-    console.log(setForm, setErrors, setLoading, setResponse, validateForm)
-  const handleChange = (e) => {console.log(e)};
+  // console.log( setLoading, setResponse);
 
-  const handleBlur = (e) => {console.log(e)};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    // console.log(name, value);
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
 
-  const handleSubmit = (e) => {console.log(e)};
+  const handleBlur = (e) => {
+    handleChange(e);
+    setErrors(validateForm(form));
+  };
+
+  const handleSubmit = (e) => {
+    console.log(e);
+  };
 
   return {
     form,
