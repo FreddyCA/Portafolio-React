@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ContentSections from "../../components/ContentSections/ContentSections";
-import Form from "../../components/Form/Form";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const ContactStyle = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <ContentSections>
       <ContactStyle id="contacto">
-        <Form></Form>
+        <ContactForm></ContactForm>
       </ContactStyle>
     </ContentSections>
   );
