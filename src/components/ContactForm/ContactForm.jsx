@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
 import { useEffect, useState } from "react";
+import validationsForm from "../../js/Formvalidation";
 
 const FormContentStyle = styled.div`
-  width: 400px;
+  width: 55%;
   background-color: skyblue;
   padding: 2rem;
 `;
@@ -81,6 +82,7 @@ const FormButtonStyle = styled.button`
       border: 2px solid var(--color--fondoPrincipal);
     `}
 `;
+
 const updateErrors = (name, errorMessage, setErrors) => {
   setErrors((prevErrors) => ({
     ...prevErrors,
@@ -88,86 +90,9 @@ const updateErrors = (name, errorMessage, setErrors) => {
   }));
 };
 
-const validationsForm = (name, value, setErrors) => {
-  if (name === "name") {
-    if (!validateEmpty(value)) {
-      return updateErrors(name, "No puede estar vacÍo", setErrors);
-    }
-    if (validateTexto(value)) {
-      if (!validateLength(value, 10)) {
-        updateErrors(name, "No se admite más de 10 caracteres", setErrors);
-        return;
-      }
-      updateErrors(name, true, setErrors);
-    } else {
-      updateErrors(name, "No se admite carácteres extraños", setErrors);
-    }
-  }
-
-  if (name === "email") {
-    if (!validateEmpty(value)) {
-      return updateErrors(name, "No puede estar vacÍo", setErrors);
-    }
-    if (validateEmail(value)) {
-      if (!validateLength(value, 20)) {
-        updateErrors(name, "No se admite más de 20 caracteres", setErrors);
-        return;
-      }
-      updateErrors(name, true, setErrors);
-    } else {
-      updateErrors(name, "El correo no es válido", setErrors);
-    }
-  }
-
-  if (name === "subject") {
-    if (!validateEmpty(value)) {
-      return updateErrors(name, "No puede estar vacÍo", setErrors);
-    }
-    if (validateTexto(value)) {
-      if (!validateLength(value, 50)) {
-        updateErrors(name, "No se admite más de 50 caracteres", setErrors);
-        return;
-      }
-      updateErrors(name, true, setErrors);
-    } else {
-      updateErrors(name, "No se admite carácteres extraños", setErrors);
-    }
-  }
-  if (name === "message") {
-    if (!validateEmpty(value)) {
-      return updateErrors(name, "No puede estar vacÍo", setErrors);
-    }
-    if (validateTexto(value)) {
-      if (!validateLength(value, 500)) {
-        updateErrors(name, "No se admite más de 500 caracteres", setErrors);
-        return;
-      }
-      updateErrors(name, true, setErrors);
-    } else {
-      updateErrors(name, "No se admite carácteres extraños", setErrors);
-    }
-  }
-};
-
-const validateTexto = (inputValue) => {
-  const regex = /^[A-Za-z0-9À-ÿ\s@/-]+$/;
-  return regex.test(inputValue);
-};
-const validateEmail = (email) => {
-  let emailRegex =
-    /^[0-9a-zA-Z]+([0-9a-zA-Z ]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$/;
-  return emailRegex.test(email);
-};
-const validateLength = (inputValue, maxLength) => {
-  return inputValue.length <= maxLength ? true : false;
-};
-const validateEmpty = (text) => {
-  return text.trim() !== "";
-};
 const evaluateErrors = (errors, submit, setSubmit) => {
   const valuesState = Object.values(errors).every((value) => value === true);
   setSubmit(valuesState);
-  console.log("ESTADO SUBMIT", submit);
 };
 
 const ContactForm = () => {
@@ -191,7 +116,7 @@ const ContactForm = () => {
       ...formData,
       [name]: value,
     });
-    validationsForm(name, value, setErrors);
+    validationsForm(name, value, setErrors, updateErrors);
   };
 
   useEffect(() => {
@@ -206,7 +131,6 @@ const ContactForm = () => {
       console.log("no se envia");
     }
   };
-  console.log(errors.name);
 
   return (
     <FormContentStyle>
@@ -273,8 +197,12 @@ const ContactForm = () => {
         <FormButtonStyle type="submit" $submit={submit}>
           Enviar
         </FormButtonStyle>
-        
-        {!submit && <FormTextErrorStyle>*Todos los campos son requeridos</FormTextErrorStyle>}
+
+        {!submit && (
+          <FormTextErrorStyle>
+            *Todos los campos son requeridos
+          </FormTextErrorStyle>
+        )}
       </FormStyle>
     </FormContentStyle>
   );
