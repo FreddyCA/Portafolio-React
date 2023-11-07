@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import LogoDev from "../../components/LogoDev/LogoDev";
 import MenuNav from "../../components/MenuNav/MenuNav";
 
@@ -12,13 +13,16 @@ const NavBarStyle = styled.div`
   justify-content: space-between;
 `;
 
-const NavBar = () => {
+const NavBar = ({ desktop }) => {
   return (
     <NavBarStyle>
       <LogoDev></LogoDev>
-      <MenuNav></MenuNav>
+      <MenuNav desktop={desktop}></MenuNav>
     </NavBarStyle>
   );
+};
+NavBar.propTypes = {
+  desktop: PropTypes.bool,
 };
 
 export default NavBar;

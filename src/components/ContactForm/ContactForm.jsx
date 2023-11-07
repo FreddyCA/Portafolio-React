@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components";
 import { useEffect, useState } from "react";
-import validationsForm from "../../js/Formvalidation";
+import validationsForm from "../../js/validationsForm.js";
 
 const FormContentStyle = styled.div`
   width: 55%;
-  background-color: skyblue;
+  background-color: var(--color--fondoPrincipal);
+  border: 5px solid var(--color--fondoHover);
+  border-left: none;
   padding: 2rem;
 `;
 
@@ -12,6 +14,7 @@ const FormNameStyle = styled.h3`
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--color--textoPrincipal);
 
   ${(props) =>
     props.$small &&
@@ -30,18 +33,28 @@ const FormStyle = styled.form`
 const FormLabelStyle = styled.label`
   margin: 0.7rem 0 0.5rem;
   font-weight: 700;
+  color: var(--color--textoPrincipal);
 `;
 
 const FormInputStyle = styled.input`
   padding: 0.5rem;
   margin-bottom: 0.5rem;
+  background-color: transparent;
+  background-color: rgb(38, 38, 38);
   border: none;
+  border: 1px solid var(--color--fondoHover);
   font-size: 1rem;
-  border-bottom: 2px solid transparent;
-
+  color: var(--color--textoPrincipal);
+  caret-color: rgb(188, 188, 188);
   &:focus {
     outline: none;
-    border-bottom: 2px solid blue;
+    border: 1px solid transparent;
+    border-bottom: 1px solid blue;
+    background-color: rgb(58, 58, 58);
+  }
+  &::placeholder {
+    color: rgb(188, 188, 188);
+    font-size: 0.875rem;
   }
 `;
 
@@ -52,34 +65,45 @@ const FormTextStyle = styled.textarea`
   resize: none;
   padding: 0.5rem;
   min-height: 3rem;
+  background-color: rgb(38, 38, 38);
   font-family: "Roboto", sans-serif;
-  border-bottom: 2px solid transparent;
-
+  color: var(--color--textoPrincipal);
+  caret-color: rgb(188, 188, 188);
+  border: 1px solid var(--color--fondoHover);
   &:focus {
     outline: none;
-    border-bottom: 2px solid blue;
+    border: 1px solid transparent;
+    border-bottom: 1px solid blue;
+    background-color: rgb(58, 58, 58);
+  }
+  &::placeholder {
+    color: rgb(188, 188, 188);
+    font-size: 0.875rem;
   }
 `;
 
 const FormTextErrorStyle = styled.span`
   font-size: 0.875rem;
   font-weight: 300;
+  color: var(--color--resaltador);
 `;
 
 const FormButtonStyle = styled.button`
-  background-color: red;
-  margin-top: 2rem;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  margin-top: 1rem;
+  padding: 15px 20px;
+  border: 1px solid #333;
   margin-bottom: 0.75rem;
   ${(props) =>
     props.$submit &&
     css`
-      background-color: var(--color--hover);
-      color: var(--color--fondoPrincipal);
-      border: 2px solid var(--color--fondoPrincipal);
+      background-color: #2d2d2d;
+      color: #007bff;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid #007bff;
+      }
     `}
 `;
 
@@ -90,7 +114,7 @@ const updateErrors = (name, errorMessage, setErrors) => {
   }));
 };
 
-const evaluateErrors = (errors, submit, setSubmit) => {
+const evaluateErrors = (errors, setSubmit) => {
   const valuesState = Object.values(errors).every((value) => value === true);
   setSubmit(valuesState);
 };
@@ -120,7 +144,7 @@ const ContactForm = () => {
   };
 
   useEffect(() => {
-    evaluateErrors(errors, submit, setSubmit);
+    evaluateErrors(errors, setSubmit);
   }, [errors, submit]);
 
   const handleSubmit = (e) => {
@@ -150,7 +174,7 @@ const ContactForm = () => {
           onChange={handleChange}
           value={formData.name}
           id="name"
-          autoComplete="on"
+          autoComplete="off"
         ></FormInputStyle>
         {errors.name && <FormTextErrorStyle>{errors.name}</FormTextErrorStyle>}
 
@@ -162,7 +186,7 @@ const ContactForm = () => {
           onChange={handleChange}
           value={formData.email}
           id="email"
-          autoComplete="on"
+          autoComplete="off"
         ></FormInputStyle>
         {errors.email && (
           <FormTextErrorStyle>{errors.email}</FormTextErrorStyle>

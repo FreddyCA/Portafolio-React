@@ -7,24 +7,18 @@ import LogoLaunch from "../../assets/logos/logoLaunchX.png";
 
 const AcademicButtonContentStyle = styled.div`
   width: 100%;
-  /* height: 300px; */
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
 `;
-
 const AcademicButtonItemStyle = styled.div`
   min-width: 200px;
   height: 300px;
   border: 2px solid rgb(228, 228, 228, 0.8);
   background-color: rgb(228, 228, 228, 0.9);
-  /* border-end-end-radius: 10px ; */
   border-bottom-right-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
-  /* border-end-start-radius: 10px ; */
-
   cursor: pointer;
-
   &:hover {
     background-color: rgb(228, 228, 228);
     translate: 0 -0.2rem;
@@ -32,7 +26,6 @@ const AcademicButtonItemStyle = styled.div`
     box-shadow: 0 5px 20px rgba(228, 228, 228, 0.8);
   }
 `;
-
 const AcademicImgContentStyle = styled.div`
   height: 70%;
   display: flex;
@@ -49,10 +42,8 @@ const AcademicImgMediumStyle = styled.div`
   justify-content: center;
   height: 90px;
 `;
-
 const AcademicTextContent = styled.div`
   background-color: slategray;
-
   height: 30%;
   display: flex;
   padding: 1rem 0 0;
@@ -69,7 +60,6 @@ const AcademicText = styled.p`
   text-align: center;
   color: var(--color--textoPrincipal);
   font-weight: 700;
-
   ${(props) =>
     props.$bold &&
     css`

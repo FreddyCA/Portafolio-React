@@ -7,6 +7,7 @@ const ContactStyle = styled.div`
   width: 100%;
   padding: 2rem;
   display: flex;
+
 `;
 
 const Contact = () => {

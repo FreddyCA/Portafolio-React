@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
+import PropTypes from "prop-types";
 import IconMenuNav from "../IconMenuNav/IconMenuNav";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const MenuNavStyle = styled.div`
   width: auto;
@@ -137,45 +138,56 @@ const MenuNavLinkStyle = styled.a`
   }
 `;
 
-const MenuNav = () => {
+const MenuNav = ({ desktop }) => {
   const data = [
-    {"id":"#sobre_mi",
-    "text": "Sobre mi"
-    },
-    {"id":"#skills",
-    "text": "Skills"
-    },
-    {"id":"#hobbies",
-    "text": "Hobbies"
-    },
-    {"id":"#formacion",
-    "text": "Formación"
-    },
-    {"id":"#proyectos",
-    "text": "Proyectos"
-    },
-    {"id":"#contacto",
-    "text": "Contacto"
-    }
+    { id: "#sobre_mi", text: "Sobre mi" },
+    { id: "#skills", text: "Skills" },
+    { id: "#hobbies", text: "Hobbies" },
+    { id: "#formacion", text: "Formación" },
+    { id: "#proyectos", text: "Proyectos" },
+    { id: "#contacto", text: "Contacto" },
   ];
   const [menuEstado, setMenuEstado] = useState(true);
+
+  const menuRef = useRef(null);
+  useEffect(() => {
+    const handleMenuClick = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setMenuEstado(true);
+      }
+    };
+    document.addEventListener("click", handleMenuClick);
+    return () => {
+      document.removeEventListener("click", handleMenuClick);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuEstado(!menuEstado);
   };
+  const toggleItem = () => {
+    if (!desktop) {
+      setMenuEstado(!menuEstado);
+    }
+  };
   return (
-    <MenuNavStyle>
+    <MenuNavStyle ref={menuRef}>
       <IconMenuNav
         toggleMenu={toggleMenu}
         menuEstado={menuEstado}
       ></IconMenuNav>
       {data.map((item, index) => (
         <MenuNavItemStyle key={index} $menuEstado={menuEstado}>
-          <MenuNavLinkStyle href={item.id}>{item.text}</MenuNavLinkStyle>
+          <MenuNavLinkStyle href={item.id} onClick={toggleItem}>
+            {item.text}
+          </MenuNavLinkStyle>
         </MenuNavItemStyle>
       ))}
     </MenuNavStyle>
   );
+};
+MenuNav.propTypes = {
+  desktop: PropTypes.bool.isRequired,
 };
 
 export default MenuNav;
