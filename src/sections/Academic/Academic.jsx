@@ -9,6 +9,13 @@ const AcademicStyle = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  @media screen and (max-width: 992px) {
+    padding: 2rem 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 `;
 
 const Academic = () => {

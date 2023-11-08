@@ -7,6 +7,14 @@ const ButtonExpLinkContentStyle = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   gap: 1rem;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.8rem;
+  }
+  @media screen and (max-width: 576px) {
+    gap: 0.5rem;
+  }
 `;
 
 const ButtonExpLinkStyle = styled.a`
@@ -28,13 +36,19 @@ const ButtonExpLinkStyle = styled.a`
     color: var(--color--textoPrincipal);
     border: 1px solid var(--color--textoPrincipal);
     box-shadow: 0px 2px 8px rgba(228, 228, 228, 0.5);
-
+  }
+  @media screen and (max-width: 992px) {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  @media screen and (max-width: 768px) {
+    width: 175px;
   }
   ${(props) =>
     props.$demo &&
     css`
       background-color: rgb(80, 45, 0);
-      &:hover{
+      &:hover {
         background-color: rgb(80, 45, 0, 0.7);
       }
     `}

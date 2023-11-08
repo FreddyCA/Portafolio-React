@@ -17,7 +17,7 @@ const IconMenuNavStyle = styled.div`
     ${(props) =>
       !props.$menuEstado &&
       css`
-        background-color: var(--color--fondoHover);
+        background-color: rgb(25, 0, 70);
         border-bottom: 2px solid var(--color--textoPrincipal);
       `}
   }

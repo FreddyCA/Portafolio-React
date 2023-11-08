@@ -5,6 +5,9 @@ const ContactImgContentStyle = styled.div`
 height: 100%;
 width: 45%;
 background-color: blue;
+@media (max-width: 768px) {
+    display: none;
+}
 `
 const ContactImgStyle = styled.img`
 display: flex;

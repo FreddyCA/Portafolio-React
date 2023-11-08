@@ -14,6 +14,15 @@ const AboutMeStyle = styled.div`
   height: 400px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+  }
+  @media screen and (max-width: 630px) {
+    flex-direction: column-reverse;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const borderAnimation = keyframes`
@@ -36,9 +45,26 @@ const PerfilContentSvg = styled.div`
   background-color: var(--color--fondoPrincipal);
   box-shadow: 0px 5px 10px rgba(275, 215, 0, 0.3);
   animation: ${borderAnimation} 5s linear infinite;
+  @media screen and (max-width: 992px) {
+    height: 350px;
+    margin: auto;
+  }
+  @media screen and (max-width: 768px) {
+    height: 300px;
+    margin: auto;
+  }
+  @media screen and (max-width: 630px) {
+    height: 250px;
+    margin-top: 2rem;
+  }
+  @media screen and (max-width: 576px) {
+    height: 170px;
+  }
+
 `;
 const PerfilSvg = styled.img`
   height: 100%;
+  width: 100%;
 `;
 const IconAboutSVGStyle = styled.img`
   width: 20px;
@@ -51,12 +77,26 @@ const BotonsContent = styled.div`
   flex-wrap: wrap;
   height: 100px;
   align-items: end;
+  @media screen and (max-width: 630px) {
+    height: auto;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
 `;
 const InfoContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
+  @media screen and (max-width: 992px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 630px) {
+    width: 100%;
+    align-items: center;
+    gap: 0;
+    margin: 0.5rem;
+  }
 `;
 
 const AboutMe = () => {

@@ -8,6 +8,12 @@ const FormContentStyle = styled.div`
   border: 5px solid var(--color--fondoHover);
   border-left: none;
   padding: 2rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    border-top: 5px solid var(--color--fondoHover);
+  }
 `;
 
 const FormNameStyle = styled.h3`
@@ -15,6 +21,12 @@ const FormNameStyle = styled.h3`
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--color--textoPrincipal);
+  @media screen and (max-width: 768px) {
+    font-size: 1.875rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.275rem;
+  }
 
   ${(props) =>
     props.$small &&
@@ -22,6 +34,12 @@ const FormNameStyle = styled.h3`
       font-weight: 300;
       font-size: 1.2rem;
       margin-bottom: 1rem;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 0.875rem;
+      }
     `}
 `;
 
@@ -55,6 +73,12 @@ const FormInputStyle = styled.input`
   &::placeholder {
     color: rgb(188, 188, 188);
     font-size: 0.875rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 0.935rem;
+    &::placeholder {
+      font-size: 0.775rem;
+    }
   }
 `;
 
@@ -95,13 +119,19 @@ const FormButtonStyle = styled.button`
   padding: 15px 20px;
   border: 1px solid #333;
   margin-bottom: 0.75rem;
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin: 1rem auto;
+  }
   ${(props) =>
     props.$submit &&
     css`
       background-color: #2d2d2d;
-      color: #007bff;
+      color: var(--color--textoPrincipal);
+      box-shadow: 0 3px 5px #007bff;
       cursor: pointer;
       &:hover {
+        color: #007bff;
         border: 1px solid #007bff;
       }
     `}

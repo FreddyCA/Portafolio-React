@@ -16,6 +16,12 @@ const ExpProfSpanStyle = styled.span`
     border: 5px solid rgb(255, 215, 0, 0.5);
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 576px) {
+    height: 200px;
+  }
 `;
 
 const ExpProfImgStyle = styled.img`
@@ -25,12 +31,20 @@ const ExpProfImgStyle = styled.img`
   &:hover {
     transform: translateY(calc(-100% + 300px));
   }
+  @media screen and (max-width: 576px) {
+    &:hover {
+      transform: translateY(calc(-100% + 200px));
+    }
+  }
 `;
 
-const ExpProfImg = ({imgItem, altItem}) => {
+const ExpProfImg = ({ imgItem, altItem }) => {
   return (
     <ExpProfSpanStyle>
-      <ExpProfImgStyle src={imgItem} alt={`captura de ${altItem}`}></ExpProfImgStyle>
+      <ExpProfImgStyle
+        src={imgItem}
+        alt={`captura de ${altItem}`}
+      ></ExpProfImgStyle>
     </ExpProfSpanStyle>
   );
 };
@@ -39,6 +53,5 @@ ExpProfImg.propTypes = {
   imgItem: PropTypes.string.isRequired,
   altItem: PropTypes.string.isRequired,
 };
-
 
 export default ExpProfImg;

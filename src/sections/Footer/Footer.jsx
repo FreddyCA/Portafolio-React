@@ -12,11 +12,17 @@ const FooterStyle = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 2px solid #e4e4e4;
+  @media screen and (max-width: 576px) {
+    height: 100px;
+  }
 `;
 const FooterText = styled.h3`
   color: #d8dfe8;
   font-weight: 700;
   font-size: 1rem;
+  @media screen and (max-width: 576px) {
+    font-size: 0.875rem;
+  }
 `;
 
 const FooterLogosContentStyle = styled.div`
@@ -24,6 +30,9 @@ const FooterLogosContentStyle = styled.div`
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  @media screen and (max-width: 576px) {
+    height: 40px;
+  }
 `;
 
 const FooterLinkLogoStyle = styled.a`
@@ -31,10 +40,18 @@ const FooterLinkLogoStyle = styled.a`
   width: 40px;
   text-decoration: none;
   cursor: pointer;
+  @media screen and (max-width: 576px) {
+    height: 30px;
+    width: 30px;
+  }
 `;
 const FooterLogoStyle = styled.img`
   width: 40px;
   height: 40px;
+  @media screen and (max-width: 576px) {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 const Footer = () => {

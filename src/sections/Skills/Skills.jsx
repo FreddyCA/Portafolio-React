@@ -12,6 +12,12 @@ const SkillsStyle = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 1.5rem 0 1rem;
+  }
 `;
 
 const Skills = () => {

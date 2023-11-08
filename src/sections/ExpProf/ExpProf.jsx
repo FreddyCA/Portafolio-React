@@ -14,16 +14,27 @@ const ExpProfStyled = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+    margin-top: 1rem;
+
+  }
 `;
 const ExpProfContentItemStyle = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
   ${(props) =>
     props.$isEven &&
     css`
       flex-direction: row-reverse;
     `}
+  
 `;
 
 const ExpProfInfoStyle = styled.div`
@@ -32,6 +43,9 @@ const ExpProfInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ExpProf = () => {

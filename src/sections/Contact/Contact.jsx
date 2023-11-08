@@ -7,7 +7,9 @@ const ContactStyle = styled.div`
   width: 100%;
   padding: 2rem;
   display: flex;
-
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const Contact = () => {

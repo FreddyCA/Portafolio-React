@@ -18,6 +18,9 @@ const ButtonStyle = styled.a`
     color: var(--color--resaltador);
     box-shadow: 5px px 15px rgba(275, 275, 275, 0.2);
   }
+  @media screen and (max-width: 576px) {
+    width: 60%;
+  }
 `;
 
 const Button = ({children, href}) => {

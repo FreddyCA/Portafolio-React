@@ -9,6 +9,7 @@ import ExpProf from "./sections/ExpProf/ExpProf";
 import Footer from "./sections/Footer/Footer";
 import Contact from "./sections/Contact/Contact";
 import { useEffect, useState } from "react";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <ScrollToTop></ScrollToTop>
       {desktop !== null && <NavBar desktop={desktop}></NavBar>}
       <AboutMe></AboutMe>
       <Person />

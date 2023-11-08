@@ -9,6 +9,13 @@ const HobbieButtonsContentStyle = styled.div`
   @media (max-width: 992px) {
     grid-template-columns: repeat(4, 1fr);
   }
+  @media (max-width: 892px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 0;
+  }
 `;
 
 const HobbieItemStyle = styled.div`
@@ -25,13 +32,26 @@ const HobbieItemStyle = styled.div`
   box-shadow: 0 5px 10px rgba(275, 175, 0, 0.7);
   box-sizing: border-box;
   cursor: pointer;
-
   &:hover {
     background-color: var(--color--fondoHover);
     color: #354657;
     translate: 0 -0.5rem;
     transition: 250ms;
     box-shadow: 0 5px 20px rgba(228, 228, 228, 0.8);
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 80px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+    box-shadow: 0 5px 7px rgba(275, 175, 0, 0.6);
+    border-radius: 0%;
+    &:hover {
+      translate: none;
+      box-shadow: 0 5px 10px rgba(228, 228, 228, 0.7);
+    }
   }
 `;
 
@@ -41,11 +61,29 @@ const HobbieItemImgStyle = styled.img`
     rotate: calc(-360deg);
     transition: 200ms;
   }
+  @media (max-width: 768px) {
+    width: 50px;
+    margin: auto;
+  }
 `;
 
 const HobbieItemTextStyle = styled.p`
   font-weight: 700;
   color: var(--color--textoPrincipal);
+  @media (max-width: 768px) {
+    height: 100%;
+    font-weight: 400;
+    padding: 0.4rem;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+  }
+  @media (max-width: 576px) {
+    font-size: 0.875rem;
+    text-align: center;
+  }
 `;
 
 const HobbieButton = ({ data }) => {

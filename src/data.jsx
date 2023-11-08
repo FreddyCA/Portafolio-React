@@ -88,27 +88,25 @@ const data = {
       "img": "/src/assets/logos/creatividad.png",
     },
     {
-        "titulo": "Superación",
-        "img": "/src/assets/logos/superation.png",
+      "titulo": "Superación",
+      "img": "/src/assets/logos/superation.png",
     },
     {
-        "titulo": "Planificación",
-        "img": "/src/assets/logos/planification.png",
+      "titulo": "Planificación",
+      "img": "/src/assets/logos/planification.png",
     },
     {
-        "titulo": "Assertividad",
-        "img": "/src/assets/logos/assertividad.png",
+      "titulo": "Assertividad",
+      "img": "/src/assets/logos/assertividad.png",
     },
     {
-        "titulo": "Discernimiento",
-        "img": "/src/assets/logos/discernimiento.png",
+      "titulo": "Discernimiento",
+      "img": "/src/assets/logos/discernimiento.png",
     },
     {
-        "titulo": "Colaboración",
-        "img": "/src/assets/logos/colaboration.png",
+      "titulo": "Colaboración",
+      "img": "/src/assets/logos/colaboration.png",
     },
-    
-    
   ],
   "hobbies": [
     {
@@ -135,49 +133,49 @@ const data = {
   "experience": [
     {
       "title": "Alura Geek Store",
-      "description": "Proyecto E-commerce en Alura",
+      "description": "Plataforma de Gestión de Productos en Línea.",
       "repository": "https://github.com/FreddyCA/AluraGeek-Store",
       "demo": "https://freddyca.github.io/AluraGeek-Store/",
       "img": "/src/assets/exp/alurageek.png"
     },
     {
       "title": "AluraFlix",
-      "description": "Proyecto en Alura con características similares a una plataforma de video.",
+      "description": "Aplicación web con características similares a una plataforma de video.",
       "repository": "https://github.com/FreddyCA/AluraFlix",
       "demo": "https://github.com/FreddyCA/AluraFlix",
       "img": "/src/assets/exp/aluraflix.png"
     },
     {
       "title": "Encriptador",
-      "description": "Challenge Oracle",
+      "description": "Aplicación web de encriptación de texto en línea.",
       "repository": "https://github.com/FreddyCA/Encriptador-ONE-alura-LATAM",
       "demo": "https://freddyca.github.io/Encriptador-ONE-alura-LATAM/",
       "img": "/src/assets/exp/encriptador.png"
     },
     {
       "title": "Apeperia",
-      "description": "Proyecto en Alura",
+      "description": "Landing page enfocada en el desarrollo y mantenimiento de aplicaciones web, creada a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/Home-Apeperia",
       "demo": "https://freddyca.github.io/Home-Apeperia/",
       "img": "/src/assets/exp/homeApeperia.png"
     },
     {
       "title": "Coinbase",
-      "description": "Proyecto en Open Bootcamp",
+      "description": "Landing page que explora y explica el mundo de las criptomonedas, desarrollada como parte del programa Open Bootcamp.",
       "repository": "https://github.com/FreddyCA/Coinbase",
       "demo": "https://freddyca.github.io/Coinbase/",
       "img": "/src/assets/exp/coinbase.png"
     },
     {
       "title": "Fruta & Fruto",
-      "description": "Proyecto en Alura",
+      "description": "Página web enfocada en recetas, desarrollada a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/Fruta-Y-Fruto",
       "demo": "https://freddyca.github.io/Fruta-Y-Fruto/",
       "img": "/src/assets/exp/frutayfruto.png"
     },
     {
       "title": "Mini Alura",
-      "description": "Proyecto en Alura",
+      "description": "Página web que representa una versión más concisa de un sitio web extenso desarrollado a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/Mini-Alura",
       "demo": "https://freddyca.github.io/Mini-Alura/",
       "img": "/src/assets/exp/miniAlura.png"
@@ -185,18 +183,46 @@ const data = {
     },
     {
       "title": "Carrito de Compras",
-      "description": "",
+      "description": "Prototipo para mejorar y completar un proyecto de comercio electrónico.",
       "repository": "https://github.com/FreddyCA/Carrito-de-Compras",
       "demo": "https://freddyca.github.io/Carrito-de-Compras/",
       "img": "/src/assets/exp/carritodeCompras.png"
     },
     {
       "title": "ORG",
-      "description": "Proyecto en Alura",
+      "description": "Página web de administración de personal desarrollado a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/ORG-React",
       "demo": "https://org-freddyca.vercel.app/",
       "img": "/src/assets/exp/org.png"
     }
+  ],
+  "academic": [
+    {
+      "img": "/src/assets/logos/umsalogo.png",
+      "title": "Ingeniería Electrónica",
+      "status": "En Curso - UMSA",
+      "alt": "logo UMSA",
+    },
+    {
+      "img": "/src/assets/logos/ONElogo.png",
+      "img2": "/src/assets/logos/logo-aluraespanhol.svg",
+      "title": "Front End",
+      "status": "2023 - Oracle, Alura",
+      "alt": "logo One",
+      "alt2": "logo Alura",
+    },
+    {
+      "img": "/src/assets/logos/OPlogo.png",
+      "title": "Front End",
+      "status": "2023 - Open Bootcamp",
+      "alt": "logo Open Bootcamp",
+    },
+    {
+      "img": "/src/assets/logos/logoLaunchX.png",
+      "title": "Full Stack Developer",
+      "status": "2022 - Innovacción virtual",
+      "alt": "logo Launch X",
+    },
   ]
 };
 

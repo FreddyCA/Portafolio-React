@@ -12,6 +12,12 @@ const HobbiesStyle = styled.div`
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 2rem 0 1rem;
+  }
 `;
 
 const Hobbies = () => {

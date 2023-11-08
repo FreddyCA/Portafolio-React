@@ -9,6 +9,14 @@ const PersonStyle = styled.div`
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(275, 175, 0, 0.4);
   border: 1px solid rgba(275, 175, 0, 0.4);
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    border-radius: 0;
+    margin-top: 1.5rem;
+    border: none;
+  }
 `;
 
 const PersonTextStyle = styled.p`
@@ -17,6 +25,13 @@ const PersonTextStyle = styled.p`
   margin: 1rem 0;
   font-size: 1.1rem;
   line-height: 1.4rem;
+  @media screen and (max-width: 992px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 0.875rem;
+    line-height: 1.2rem;
+  }
 `;
 
 const Person = () => {

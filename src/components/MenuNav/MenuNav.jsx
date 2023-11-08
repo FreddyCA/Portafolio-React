@@ -18,6 +18,9 @@ const MenuNavStyle = styled.div`
     height: auto;
     flex-direction: column;
   }
+  @media screen and (max-width: 576px) {
+    width: 200px;
+  }
 `;
 const AnimationMenuItem = keyframes`
 0% {
@@ -38,7 +41,6 @@ const MenuNavItemStyle = styled.div`
     height: 50px;
     justify-content: center;
     border-bottom: 2px solid var(--color--textoPrincipal);
-
     animation: ${AnimationMenuItem} 0.1s ease-in-out;
     animation-fill-mode: both;
     &:nth-child(2) {
@@ -52,7 +54,6 @@ const MenuNavItemStyle = styled.div`
     &:nth-child(4) {
       animation-delay: 0.15s;
       z-index: 18;
-      box-shadow: 5px 10px 15px rgba(275, 275, 275, 0.3);
     }
     &:nth-child(5) {
       animation-delay: 0.2s;
@@ -66,6 +67,7 @@ const MenuNavItemStyle = styled.div`
       animation-delay: 0.3s;
       z-index: 15;
       box-shadow: 5px 10px 15px rgba(275, 275, 275, 0.3);
+      border-bottom: 2px solid var(--color--textoPrincipal);
     }
 
     ${(props) =>
@@ -84,7 +86,6 @@ const MenuNavLinkStyle = styled.a`
   font-size: 1.125rem;
   color: var(--color--textoPrincipal);
   white-space: nowrap;
-
   position: relative;
   overflow: hidden;
   &::before,
@@ -120,7 +121,7 @@ const MenuNavLinkStyle = styled.a`
     display: flex;
     justify-content: center;
     font-weight: 400;
-    background-color: var(--color--fondoHover);
+    background-color: rgb(25, 0, 70);
     &:hover {
       background-color: var(--color--fondoPrincipal);
       color: var(--color--resaltador);
@@ -135,6 +136,9 @@ const MenuNavLinkStyle = styled.a`
       transform: translateX(-50%);
       height: 2px;
     }
+  }
+  @media screen and (max-width: 992px) {
+    font-size: 0.875rem;
   }
 `;
 

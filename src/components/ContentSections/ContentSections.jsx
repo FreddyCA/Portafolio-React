@@ -2,13 +2,18 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const ContentSectionsStyle = styled.div`
-  width: 992px;
+  max-width: 992px;
   display: flex;
   margin: 1.5rem auto;
   padding: 2rem;
 
   @media screen and (max-width: 992px) {
     width: auto;
+    padding: 1rem;
+    margin: 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
   }
 `;
 
