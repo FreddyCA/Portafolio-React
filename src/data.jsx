@@ -1,21 +1,24 @@
+// import githubSVG from "../src/assets/svg/github.svg"
+import { github, linkedin, pdf } from "../src/assets/svg/index"
 const data = {
   "aboutMe": [
     {
       "redName": "GitHub",
-      "icon": "../../assets/svg/github.svg",
+      "icon": github,
       "href": "https://github.com/FreddyCA",
     },
     {
       "redName": "Linkedin",
-      "icon": "../../assets/svg/linkedin.svg",
+      "icon": linkedin,
       "href":"https://www.linkedin.com/in/carlosari/",
     },
     {
       "redName": "Currículum",
-      "icon": "../../assets/svg/pdf.svg",
+      "icon": pdf,
       "href": "#",
     }
   ],
+  // crear base de datos
   "person": [
     {
       "p": "Soy de La Paz, Bolivia, en los últimos 2 años llevo aprendiendo de manera autodidacta tecnologías para el desarrollo Front End, participando en proyecto Oracle ONE en Alura Latam, Launch X Latinoamérica, cursos adicionales y finalmente en Open-Bootcam por los cual estoy respaldado como Programador Jr y Front End Developer además de cursos relacionados con las soft skills, actualmente estoy fortaleciendo mis Hards Skills con proyectos propios.",
