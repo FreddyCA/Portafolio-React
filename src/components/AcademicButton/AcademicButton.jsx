@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import data from "../../data";
+import PropTypes from "prop-types";
 
 const AcademicButtonContentStyle = styled.div`
   width: 100%;
@@ -112,10 +112,10 @@ const AcademicText = styled.p`
     `}
 `;
 
-const AcademicButton = () => {
+const AcademicButton = ({data}) => {
   return (
     <AcademicButtonContentStyle>
-      {data.academic.map((item, index) => (
+      {data.map((item, index) => (
         <AcademicButtonItemStyle key={index}>
           {index !== 1 ? (
             <>
@@ -154,6 +154,10 @@ const AcademicButton = () => {
       ))}
     </AcademicButtonContentStyle>
   );
+};
+
+AcademicButton.propTypes = {
+  data: PropTypes.array.isRequired,
 };
 
 export default AcademicButton;

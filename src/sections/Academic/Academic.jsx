@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import AcademicButton from "../../components/AcademicButton/AcademicButton";
 
@@ -18,13 +19,17 @@ const AcademicStyle = styled.div`
   }
 `;
 
-const Academic = () => {
+const Academic = ({dataAcademic}) => {
   return (
     <AcademicStyle id="formacion">
       <Subtitle bold>Formación Académica</Subtitle>
-      <AcademicButton></AcademicButton>
+      <AcademicButton data={dataAcademic}></AcademicButton>
     </AcademicStyle>
   );
+};
+
+Academic.propTypes = {
+  dataAcademic: PropTypes.array.isRequired,
 };
 
 export default Academic;

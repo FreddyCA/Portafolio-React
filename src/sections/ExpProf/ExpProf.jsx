@@ -1,11 +1,10 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 import ContentSections from "../../components/ContentSections/ContentSections";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import ExpProfImg from "../../components/ExpProfImg/ExpProfImg";
 import ExpText from "../../components/ExpText/ExpText";
 import ButtonExpLink from "../../components/ButtonExpLink/ButtonExpLink";
-
-import data from "../../data";
 
 const ExpProfStyled = styled.div`
   width: 100%;
@@ -48,12 +47,12 @@ const ExpProfInfoStyle = styled.div`
   }
 `;
 
-const ExpProf = () => {
+const ExpProf = ({dataExpProf}) => {
   return (
     <ContentSections>
       <ExpProfStyled id="proyectos">
         <Subtitle bold>Experiencia Profesional</Subtitle>
-        {data.experience.map((item, index) => (
+        {dataExpProf.map((item, index) => (
           <ExpProfContentItemStyle key={index} $isEven={index % 2 !== 0}>
             <ExpProfImg imgItem={item.img} altItem={item.title}></ExpProfImg>
             <ExpProfInfoStyle>
@@ -69,6 +68,10 @@ const ExpProf = () => {
       </ExpProfStyled>
     </ContentSections>
   );
+};
+
+ExpProf.propTypes = {
+  dataExpProf: PropTypes.array.isRequired,
 };
 
 export default ExpProf;

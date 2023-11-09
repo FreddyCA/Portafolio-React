@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import ContentSections from "../../components/ContentSections/ContentSections";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import SkillButton from "../../components/SkillButton/SkillButton";
-
-import data from "../../data"
 
 const SkillsStyle = styled.div`
   width: 100%;
@@ -20,23 +19,28 @@ const SkillsStyle = styled.div`
   }
 `;
 
-const Skills = () => {
+const Skills = ({ dataHardSkill, dataSoftSkill }) => {
   return (
     <>
       <ContentSections>
         <SkillsStyle id="skills">
           <Subtitle bold={true}>Hard Skills</Subtitle>
-          <SkillButton data={data.hardSkills}></SkillButton>
+          <SkillButton data={dataHardSkill}></SkillButton>
         </SkillsStyle>
       </ContentSections>
       <ContentSections>
         <SkillsStyle>
           <Subtitle bold={true}>Soft Skills</Subtitle>
-          <SkillButton data={data.softSkills}></SkillButton>
+          <SkillButton data={dataSoftSkill}></SkillButton>
         </SkillsStyle>
       </ContentSections>
     </>
   );
+};
+
+Skills.propTypes = {
+  dataHardSkill: PropTypes.array.isRequired,
+  dataSoftSkill: PropTypes.array.isRequired,
 };
 
 export default Skills;

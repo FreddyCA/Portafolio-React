@@ -16,6 +16,17 @@ const data = {
       "href": "#",
     }
   ],
+  "person": [
+    {
+      "p": "Soy de La Paz, Bolivia, en los últimos 2 años llevo aprendiendo de manera autodidacta tecnologías para el desarrollo Front End, participando en proyecto Oracle ONE en Alura Latam, Launch X Latinoamérica, cursos adicionales y finalmente en Open-Bootcam por los cual estoy respaldado como Programador Jr y Front End Developer además de cursos relacionados con las soft skills, actualmente estoy fortaleciendo mis Hards Skills con proyectos propios.",
+    },
+    {
+      "p": "Desde niño tengo una pasión por el funcionamiento de equipos y sistemas electrónicos y es por eso que tengo una formación como ingeniero electrónico que aún no pude concluir, pero lo que me dio la posibilidad de aprender varios lenguajes de programación y una gran capacidad de análisis e interpretación de documentación.",
+    },
+    {
+      "p": "Me encantan los instrumentos musicales de bronce, principalmente la trompeta por el cual forme parte de bandas musicales donde lideré secciones por el cual forje el trabajo en equipo, disciplina, responsabilidad y comunicación asertiva."
+    }
+  ],
   "hardSkills": [
     {
       "titulo": "HTML",

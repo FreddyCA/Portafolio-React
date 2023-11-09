@@ -1,13 +1,11 @@
 import styled, { keyframes } from "styled-components";
+import PropTypes from "prop-types";
 import ContentSections from "../../components/ContentSections/ContentSections";
-
 import PefilPhoto from "../../assets/ofi-small.png";
 import Button from "../../components/Button/Button";
 import Name from "../../components/Name/Name";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import ArrowSVG from "../../assets/svg/arrow.svg";
-
-import data from "../../data";
 
 const AboutMeStyle = styled.div`
   width: 100%;
@@ -60,7 +58,6 @@ const PerfilContentSvg = styled.div`
   @media screen and (max-width: 576px) {
     height: 170px;
   }
-
 `;
 const PerfilSvg = styled.img`
   height: 100%;
@@ -99,7 +96,7 @@ const InfoContent = styled.div`
   }
 `;
 
-const AboutMe = () => {
+const AboutMe = ({ dataAboutMe }) => {
   return (
     <ContentSections>
       <AboutMeStyle>
@@ -107,7 +104,7 @@ const AboutMe = () => {
           <Name></Name>
           <Subtitle>Frontend Developer</Subtitle>
           <BotonsContent>
-            {data.aboutMe.map((item, index) => (
+            {dataAboutMe.map((item, index) => (
               <Button key={index} href={item.href}>
                 <IconAboutSVGStyle
                   src={item.icon}
@@ -128,6 +125,9 @@ const AboutMe = () => {
       </AboutMeStyle>
     </ContentSections>
   );
+};
+AboutMe.propTypes = {
+  dataAboutMe: PropTypes.array.isRequired,
 };
 
 export default AboutMe;

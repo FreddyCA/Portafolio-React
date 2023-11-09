@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import ContentSections from "../../components/ContentSections/ContentSections";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import HobbieButton from "../../components/HobbieButton/HobbieButton";
-import data from "../../data";
 
 const HobbiesStyle = styled.div`
   width: 100%;
@@ -20,15 +20,18 @@ const HobbiesStyle = styled.div`
   }
 `;
 
-const Hobbies = () => {
+const Hobbies = ({dataHobbie}) => {
   return (
     <ContentSections>
       <HobbiesStyle id="hobbies">
         <Subtitle bold={true}>Hobbies</Subtitle>
-        <HobbieButton data={data.hobbies}></HobbieButton>
+        <HobbieButton data={dataHobbie}></HobbieButton>
       </HobbiesStyle>
     </ContentSections>
   );
+};
+Hobbies.propTypes = {
+  dataHobbie: PropTypes.array.isRequired,
 };
 
 export default Hobbies;
