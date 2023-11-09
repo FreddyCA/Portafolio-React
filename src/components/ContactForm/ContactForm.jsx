@@ -149,21 +149,23 @@ const evaluateErrors = (errors, setSubmit) => {
   setSubmit(valuesState);
 };
 
+const initialData = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+const initialErrors = {
+  name: false,
+  email: false,
+  subject: false,
+  message: false,
+};
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    subject: false,
-    message: false,
-  });
+  const [formData, setFormData] = useState(initialData);
+  const [errors, setErrors] = useState(initialErrors);
   const [submit, setSubmit] = useState(false);
-
+  const [submitBtn, setSubmitBtn] = useState("Enviar");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -180,9 +182,31 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (submit) {
-      console.log("envia", formData);
-    } else {
-      console.log("no se envia");
+      setSubmitBtn("Enviando");
+      fetch("https://formsubmit.co/ajax/dev22carlos@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setFormData(initialData);
+          if (data.success) {
+            setSubmitBtn("Enviado");
+            setTimeout(() => {
+              setSubmitBtn("Enviar");
+            }, 5000);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          setSubmitBtn("No se pudo enviar");
+        });
+        
+      setErrors(initialErrors);
     }
   };
 
@@ -249,7 +273,7 @@ const ContactForm = () => {
         )}
 
         <FormButtonStyle type="submit" $submit={submit}>
-          Enviar
+          {submitBtn}
         </FormButtonStyle>
 
         {!submit && (

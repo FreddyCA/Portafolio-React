@@ -17,6 +17,9 @@ const AcademicButtonItemStyle = styled.div`
   background-color: rgb(228, 228, 228, 0.9);
   border-bottom-right-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
   &:hover {
     background-color: rgb(228, 228, 228);
@@ -27,7 +30,6 @@ const AcademicButtonItemStyle = styled.div`
   @media screen and (max-width: 992px) {
     min-width: 150px;
     height: 250px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     &:hover {

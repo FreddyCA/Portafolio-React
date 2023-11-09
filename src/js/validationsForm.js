@@ -4,8 +4,8 @@ const validationsForm = (name, value, setErrors, updateErrors) => {
       return updateErrors(name, "No puede estar vacÍo", setErrors);
     }
     if (validateTexto(value)) {
-      if (!validateLength(value, 10)) {
-        updateErrors(name, "No se admite más de 10 caracteres", setErrors);
+      if (!validateLength(value, 50)) {
+        updateErrors(name, "No se admite más de 50 caracteres", setErrors);
         return;
       }
       updateErrors(name, true, setErrors);
@@ -18,8 +18,8 @@ const validationsForm = (name, value, setErrors, updateErrors) => {
       return updateErrors(name, "No puede estar vacÍo", setErrors);
     }
     if (validateEmail(value)) {
-      if (!validateLength(value, 20)) {
-        updateErrors(name, "No se admite más de 20 caracteres", setErrors);
+      if (!validateLength(value, 30)) {
+        updateErrors(name, "No se admite más de 30 caracteres", setErrors);
         return;
       }
       updateErrors(name, true, setErrors);
@@ -33,8 +33,8 @@ const validationsForm = (name, value, setErrors, updateErrors) => {
       return updateErrors(name, "No puede estar vacÍo", setErrors);
     }
     if (validateTexto(value)) {
-      if (!validateLength(value, 50)) {
-        updateErrors(name, "No se admite más de 50 caracteres", setErrors);
+      if (!validateLength(value, 150)) {
+        updateErrors(name, "No se admite más de 150 caracteres", setErrors);
         return;
       }
       updateErrors(name, true, setErrors);
@@ -47,8 +47,8 @@ const validationsForm = (name, value, setErrors, updateErrors) => {
       return updateErrors(name, "No puede estar vacÍo", setErrors);
     }
     if (validateTexto(value)) {
-      if (!validateLength(value, 500)) {
-        updateErrors(name, "No se admite más de 500 caracteres", setErrors);
+      if (!validateLength(value, 2000)) {
+        updateErrors(name, "No se admite más de 2000 caracteres", setErrors);
         return;
       }
       updateErrors(name, true, setErrors);
@@ -59,7 +59,7 @@ const validationsForm = (name, value, setErrors, updateErrors) => {
 };
 
 const validateTexto = (inputValue) => {
-  const regex = /^[A-Za-z0-9À-ÿ\s@/-]+$/;
+  const regex = /^[A-Za-z0-9À-ÿ\s@/,_.-]+$/;
   return regex.test(inputValue);
 };
 const validateEmail = (email) => {
