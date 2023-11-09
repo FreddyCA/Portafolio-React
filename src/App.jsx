@@ -42,6 +42,7 @@ const App = () => {
       <Hobbies dataHobbie={data.hobbies} />
       <Academic dataAcademic={data.academic} />
       <ExpProf dataExpProf={data.experience} />
+      {/* mejorar el componente boton de envio */}
       <Contact />
       <Footer></Footer>
     </>
