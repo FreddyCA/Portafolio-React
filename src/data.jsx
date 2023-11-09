@@ -1,5 +1,49 @@
-// import githubSVG from "../src/assets/svg/github.svg"
 import { github, linkedin, pdf } from "../src/assets/svg/index"
+import { aluraflix,
+  alurageek,
+  carritodeCompras,
+  coinbase,
+  encriptador,
+  frutayfruto,
+  homeApeperia,
+  miniAlura,
+  org
+} from "./assets/exp";
+
+import { 
+  html5,
+  css3,
+  js,
+  react,
+  typescript,
+  bootstrap,
+  sass,
+  materialUI,
+  node,
+  git,
+  oracle,
+  githubLogo,
+  mysql,
+  firebase,
+  python,
+  cPlusPlus, 
+  creatividad,
+  superation,
+  planification,
+  assertividad,
+  discernimiento,
+  colaboration,
+  trompeta,
+  lectura,
+  musica,
+  futbol,
+  micro,
+  umsaLogo,
+  oneLogo,
+  aluraLogo,
+  opLogo,
+  launchXLogo,
+} from "./assets/logos";
 const data = {
   "aboutMe": [
     {
@@ -18,7 +62,6 @@ const data = {
       "href": "#",
     }
   ],
-  // crear base de datos
   "person": [
     {
       "p": "Soy de La Paz, Bolivia, en los últimos 2 años llevo aprendiendo de manera autodidacta tecnologías para el desarrollo Front End, participando en proyecto Oracle ONE en Alura Latam, Launch X Latinoamérica, cursos adicionales y finalmente en Open-Bootcam por los cual estoy respaldado como Programador Jr y Front End Developer además de cursos relacionados con las soft skills, actualmente estoy fortaleciendo mis Hards Skills con proyectos propios.",
@@ -33,115 +76,115 @@ const data = {
   "hardSkills": [
     {
       "titulo": "HTML",
-      "img": "../src/assets/logos/html5.png",
+      "img": html5,
     },
     {
       "titulo": "CSS",
-      "img": "../src/assets/logos/ccs.png",
+      "img": css3,
     },
     {
       "titulo": "JavaScript",
-      "img": "../src/assets/logos/js.png",
+      "img": js,
     },
     {
       "titulo": "React",
-      "img": "../src/assets/logos/react.png",
+      "img": react,
     },
     {
       "titulo": "TypeScript",
-      "img": "../src/assets/logos/typescript.png",
+      "img": typescript,
     },
     {
       "titulo": "Bootstrap",
-      "img": "../src/assets/logos/bootstrap.png",
+      "img": bootstrap,
     },
     {
       "titulo": "Sass",
-      "img": "../src/assets/logos/sass.png",
+      "img": sass,
     },
     {
       "titulo": "Material-UI",
-      "img": "../src/assets/logos/material-ui.png",
+      "img": materialUI,
     },
     {
       "titulo": "Node.js",
-      "img": "../src/assets/logos/node.png",
+      "img": node,
     },
     {
       "titulo": "Git",
-      "img": "../src/assets/logos/git.png",
+      "img": git,
     },
     {
       "titulo": "GitHub",
-      "img": "../src/assets/logos/github.png",
+      "img": githubLogo,
     },
     {
       "titulo": "OCI",
-      "img": "../src/assets/logos/oracle.png",
+      "img": oracle,
     },
     {
       "titulo": "MySQL",
-      "img": "../src/assets/logos/mysql.png",
+      "img": mysql,
     },
     {
       "titulo": "Firebase",
-      "img": "../src/assets/logos/firebase.png",
+      "img": firebase,
     },
     {
       "titulo": "Python",
-      "img": "../src/assets/logos/python.png",
+      "img": python,
     },
     {
       "titulo": "C++",
-      "img": "../src/assets/logos/c-plus-plus.png",
+      "img": cPlusPlus,
     },
   ],
   "softSkills": [
     {
       "titulo": "Creatividad",
-      "img": "../src/assets/logos/creatividad.png",
+      "img": creatividad,
     },
     {
       "titulo": "Superación",
-      "img": "../src/assets/logos/superation.png",
+      "img": superation,
     },
     {
       "titulo": "Planificación",
-      "img": "../src/assets/logos/planification.png",
+      "img": planification,
     },
     {
       "titulo": "Assertividad",
-      "img": "../src/assets/logos/assertividad.png",
+      "img": assertividad,
     },
     {
       "titulo": "Discernimiento",
-      "img": "../src/assets/logos/discernimiento.png",
+      "img": discernimiento,
     },
     {
       "titulo": "Colaboración",
-      "img": "../src/assets/logos/colaboration.png",
+      "img": colaboration,
     },
   ],
   "hobbies": [
     {
       "titulo": "Tocar trompeta",
-      "img": "../src/assets/logos/trompeta.png",
+      "img": trompeta,
     },
     {
       "titulo": "Lectura",
-      "img": "../src/assets/logos/lectura.png",
+      "img": lectura,
     },
     {
       "titulo": "Escuchar música",
-      "img": "../src/assets/logos/musica.png",
+      "img": musica,
     },
     {
       "titulo": "Fútbol",
-      "img": "../src/assets/logos/futbol.png",
+      "img": futbol,
     },
     {
       "titulo": "Electrónica",
-      "img": "../src/assets/logos/micro.png",
+      "img": micro,
     }
   ],
   "experience": [
@@ -150,49 +193,49 @@ const data = {
       "description": "Plataforma de Gestión de Productos en Línea.",
       "repository": "https://github.com/FreddyCA/AluraGeek-Store",
       "demo": "https://freddyca.github.io/AluraGeek-Store/",
-      "img": "../src/assets/exp/alurageek.png"
+      "img": alurageek
     },
     {
       "title": "AluraFlix",
       "description": "Aplicación web con características similares a una plataforma de video.",
       "repository": "https://github.com/FreddyCA/AluraFlix",
       "demo": "https://github.com/FreddyCA/AluraFlix",
-      "img": "../src/assets/exp/aluraflix.png"
+      "img": aluraflix
     },
     {
       "title": "Encriptador",
       "description": "Aplicación web de encriptación de texto en línea.",
       "repository": "https://github.com/FreddyCA/Encriptador-ONE-alura-LATAM",
       "demo": "https://freddyca.github.io/Encriptador-ONE-alura-LATAM/",
-      "img": "../src/assets/exp/encriptador.png"
+      "img": encriptador
     },
     {
       "title": "Apeperia",
       "description": "Landing page enfocada en el desarrollo y mantenimiento de aplicaciones web, creada a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/Home-Apeperia",
       "demo": "https://freddyca.github.io/Home-Apeperia/",
-      "img": "../src/assets/exp/homeApeperia.png"
+      "img": homeApeperia
     },
     {
       "title": "Coinbase",
       "description": "Landing page que explora y explica el mundo de las criptomonedas, desarrollada como parte del programa Open Bootcamp.",
       "repository": "https://github.com/FreddyCA/Coinbase",
       "demo": "https://freddyca.github.io/Coinbase/",
-      "img": "../src/assets/exp/coinbase.png"
+      "img": coinbase
     },
     {
       "title": "Fruta & Fruto",
       "description": "Página web enfocada en recetas, desarrollada a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/Fruta-Y-Fruto",
       "demo": "https://freddyca.github.io/Fruta-Y-Fruto/",
-      "img": "../src/assets/exp/frutayfruto.png"
+      "img": frutayfruto
     },
     {
       "title": "Mini Alura",
       "description": "Página web que representa una versión más concisa de un sitio web extenso desarrollado a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/Mini-Alura",
       "demo": "https://freddyca.github.io/Mini-Alura/",
-      "img": "../src/assets/exp/miniAlura.png"
+      "img": miniAlura
 
     },
     {
@@ -200,39 +243,39 @@ const data = {
       "description": "Prototipo para mejorar y completar un proyecto de comercio electrónico.",
       "repository": "https://github.com/FreddyCA/Carrito-de-Compras",
       "demo": "https://freddyca.github.io/Carrito-de-Compras/",
-      "img": "../src/assets/exp/carritodeCompras.png"
+      "img": carritodeCompras
     },
     {
       "title": "ORG",
       "description": "Página web de administración de personal desarrollado a través del programa ONE.",
       "repository": "https://github.com/FreddyCA/ORG-React",
       "demo": "https://org-freddyca.vercel.app/",
-      "img": "../src/assets/exp/org.png"
+      "img": org
     }
   ],
   "academic": [
     {
-      "img": "../src/assets/logos/umsalogo.png",
+      "img": umsaLogo,
       "title": "Ingeniería Electrónica",
       "status": "En Curso - UMSA",
       "alt": "logo UMSA",
     },
     {
-      "img": "../src/assets/logos/ONElogo.png",
-      "img2": "../src/assets/logos/logo-aluraespanhol.svg",
+      "img": oneLogo,
+      "img2": aluraLogo,
       "title": "Front End",
       "status": "2023 - Oracle, Alura",
       "alt": "logo One",
       "alt2": "logo Alura",
     },
     {
-      "img": "../src/assets/logos/OPlogo.png",
+      "img": opLogo,
       "title": "Front End",
       "status": "2023 - Open Bootcamp",
       "alt": "logo Open Bootcamp",
     },
     {
-      "img": "../src/assets/logos/logoLaunchX.png",
+      "img": launchXLogo,
       "title": "Full Stack Developer",
       "status": "2022 - Innovacción virtual",
       "alt": "logo Launch X",
