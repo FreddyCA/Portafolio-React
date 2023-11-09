@@ -2,17 +2,17 @@ const data = {
   "aboutMe": [
     {
       "redName": "GitHub",
-      "icon": "/src/assets/svg/github.svg",
+      "icon": "../../assets/svg/github.svg",
       "href": "https://github.com/FreddyCA",
     },
     {
       "redName": "Linkedin",
-      "icon": "/src/assets/svg/linkedin.svg",
+      "icon": "../../assets/svg/linkedin.svg",
       "href":"https://www.linkedin.com/in/carlosari/",
     },
     {
       "redName": "Currículum",
-      "icon": "/src/assets/svg/pdf.svg",
+      "icon": "../../assets/svg/pdf.svg",
       "href": "#",
     }
   ],
