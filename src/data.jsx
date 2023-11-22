@@ -44,6 +44,8 @@ import {
   opLogo,
   launchXLogo,
 } from "./assets/logos";
+
+import CVpdf from './assets/cv/CV_Carlos-Ari_FrontEnd-Developer.pdf'
 const data = {
   "aboutMe": [
     {
@@ -59,7 +61,7 @@ const data = {
     {
       "redName": "Currículum",
       "icon": pdf,
-      "href": "#",
+      "href": CVpdf,
     }
   ],
   "person": [
