@@ -7,6 +7,8 @@ import frutayfruto from "./frutayfruto.png";
 import miniAlura from "./miniAlura.png";
 import carritodeCompras from "./carritodeCompras.png";
 import org from "./org.png";
+import caMedia from "./caMedia.png";
+import caLearning from "./CA_e-learning.png";
 
 export {
   alurageek,
@@ -18,4 +20,6 @@ export {
   miniAlura,
   carritodeCompras,
   org,
+  caMedia,
+  caLearning,
 };

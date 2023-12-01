@@ -7,7 +7,9 @@ import { aluraflix,
   frutayfruto,
   homeApeperia,
   miniAlura,
-  org
+  org,
+  caMedia,
+  caLearning
 } from "./assets/exp";
 
 import { 
@@ -191,11 +193,25 @@ const data = {
   ],
   "experience": [
     {
+      "title": "CA - Media",
+      "description": "Plataforma similar a Youtube",
+      "repository": "https://github.com/FreddyCA/CA-Media",
+      "demo": "https://freddyca.github.io/CA-Media/#/",
+      "img": caMedia
+    },
+    {
       "title": "Alura Geek Store",
       "description": "Plataforma de Gestión de Productos en Línea.",
       "repository": "https://github.com/FreddyCA/AluraGeek-Store",
       "demo": "https://freddyca.github.io/AluraGeek-Store/",
       "img": alurageek
+    },
+    {
+      "title": "CA - E-learning",
+      "description": "Plataforma de cursos en Línea",
+      "repository": "https://github.com/FreddyCA/e-learning_CA",
+      "demo": "https://github.com/FreddyCA/e-learning_CA",
+      "img": caLearning
     },
     {
       "title": "AluraFlix",
