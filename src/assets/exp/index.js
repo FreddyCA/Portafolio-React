@@ -9,6 +9,7 @@ import carritodeCompras from "./carritodeCompras.png";
 import org from "./org.png";
 import caMedia from "./caMedia.png";
 import caLearning from "./CA_e-learning.png";
+import hydra from "./hydra.png"
 
 export {
   alurageek,
@@ -22,4 +23,5 @@ export {
   org,
   caMedia,
   caLearning,
+  hydra
 };

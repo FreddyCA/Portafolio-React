@@ -9,7 +9,8 @@ import { aluraflix,
   miniAlura,
   org,
   caMedia,
-  caLearning
+  caLearning,
+  hydra
 } from "./assets/exp";
 
 import { 
@@ -198,6 +199,13 @@ const data = {
       "repository": "https://github.com/FreddyCA/CA-Media",
       "demo": "https://freddyca.github.io/CA-Media/#/",
       "img": caMedia
+    },
+    {
+      "title": "Hydra",
+      "description": "Landing page moderna",
+      "repository": "https://github.com/FreddyCA/Hydra-React.JS",
+      "demo": "https://freddyca.github.io/Hydra-React.JS/",
+      "img": hydra
     },
     {
       "title": "Alura Geek Store",
